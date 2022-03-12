@@ -1,0 +1,30 @@
+@import "./mixins/screen_mixin";
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.wrap {
+    width: 1440px;
+    height: auto; 
+    margin: 0 auto;
+
+    @include tablet{
+        width: 960px;
+        height: auto;
+        margin: 0 auto;
+    }
+    @include phone {
+        width: 540px;
+        height: auto; 
+        margin: 0 auto;
+    }
+}
+@import "../styles/config";
+@import "../styles/mixins/mixin";
+@import "../styles/blocks/header";
+@import "../styles/blocks/features";
+@import "../styles/blocks/plan";
+@import "../styles/blocks/huge_global";
+@import "../styles/blocks/trusted";
+@import "../styles/blocks/subscribe";
+@import "../styles/blocks/footer";

@@ -1,0 +1,20 @@
+@import "../config";
+@mixin display ($direction: row, $justify: space-between) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin title($size: 2rem, $weight: bold) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $titleColor;
+    height: fit-content;
+}
+
+@mixin text($size: 1.3rem) {
+    font-size: $size;
+    color: $textColor;
+    height: fit-content;
+}

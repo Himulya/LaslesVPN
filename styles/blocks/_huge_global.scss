@@ -1,0 +1,73 @@
+@import "../config";
+@import "../mixins/mixin";
+@import "../mixins/screen_mixin";
+.huge_global {
+    width: 100%;
+    min-height: 100vh;
+
+    @include display(column, space-between);
+
+    @include tablet {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include phone {
+        display: none;
+    }
+
+    &__title {
+        @include title(35px);
+        width: 383px;
+        height: 100px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__text {
+        @include text(16px);
+        width: 555px;
+        height: 60px;
+        line-height: 30px;
+        margin-bottom: 155px;
+        text-align: center;
+    }
+
+    &__map {
+        @include tablet {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+
+    &__sponsored {
+        @include tablet {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+}
+.huge_text_wrap {
+    width: 100%;
+    height: fit-content;
+
+    @include display(column, center);
+}
+.huge_map_wrap {
+    width: fit-content;
+    height: fit-content;
+
+    @include tablet {
+        width: 100%;
+        height: fit-content;
+    }
+}
+.huge_sponsored_wrap {
+    width: fit-content;
+    height: fit-content;
+
+    @include tablet {
+        width: 100%;
+        height: fit-content;
+    }
+}

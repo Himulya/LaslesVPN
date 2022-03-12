@@ -1,0 +1,45 @@
+@import  "../mixins/mixin";
+@import "../config";
+@import "../mixins/screen_mixin";
+.footer_middle {
+    width: 45%;
+    height: 100%;
+
+    @include display(row, center);
+    align-items: flex-start;
+
+    @include phone {
+        display: none;
+    }
+
+    &__title {
+        @include title(18px);
+        line-height: 30px;
+        width: 71px;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+}
+.footer_middle_left_wrap {
+    width: 50%;
+    height: fit-content;
+}
+.footer_middle_right_wrap {
+    width: 50%;
+    height: fit-content;
+
+
+}
+.footer_middle_menu {
+    width: 100%;
+    height: fit-content;
+
+    &_item {
+        margin-bottom: 10px;
+
+        &__link {
+            @include text(16px);
+            line-height: 30px;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "../mixins/mixin";
+@import "../mixins/screen_mixin";
+@import "../config";
+.features {
+    width: 100%;
+    height: 680px;
+    
+    @include display(row, space-between);
+    
+    @include tablet{
+        width: 100%;
+        height: 100%;
+        
+        @include display(column, center);
+    }
+    @include phone{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    &_left {
+        width: 65%;
+        height: 100%;
+        
+        @include display (column, center);
+
+        @include tablet{
+            display: none;
+        }
+
+        @include phone{
+            width: 100%;
+            height: 100%;
+        }
+
+        &__img {
+            width:508px;
+            height: 414px;
+        }
+    }
+    &_right {
+        width: 35%;
+        height: 100%;
+
+        @include display (column, center);
+
+        @include phone{
+            width: 100%;
+            height: 100%;
+        }
+
+        &__title {
+            @include title(35px, bold);
+            line-height: 50px;
+            width: 384px;
+            height: 100px;
+
+            @include tablet{
+                text-align: center;
+            }
+            @include phone {
+                text-align: center;
+            }
+        }
+        &__text {
+            @include text(16px);
+            line-height: 30px;
+            margin: 20px 0;
+            width: 427px;
+            height: 60px;
+            
+            @include tablet{
+                text-align: center;
+            }
+            @include phone {
+                text-align: center;
+            }
+        }
+    }
+
+}
+.features_img_wrap {
+    width: 100%;
+    height: fit-content;
+    @include display(column, center);
+}
+.features_text_wrap {
+    width: 100%;
+    height: fit-content;
+    @include display (column, center);
+    align-items: flex-start;
+
+    @include tablet{
+        align-items: center;
+    }
+}
+.features_right_list {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+
+    @include display (column, center);
+    align-items: flex-start;
+
+    @include tablet{
+        align-items: center;
+    }
+    @include phone {
+        @include display (column, center);
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        color: $textColor;
+        
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-image: url("./img/tick.png");
+            margin-right: 12px;
+            background-size: cover;
+        }
+    }
+}

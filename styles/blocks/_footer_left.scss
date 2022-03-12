@@ -1,0 +1,119 @@
+@import  "../mixins/mixin";
+@import "../config";
+@import "../mixins/screen_mixin";
+.footer_left {
+    width: 40%;
+    height: 100%;
+
+    @include display(column, flex-start);
+    align-items: flex-start;
+
+    @include tablet {
+        width: 40%;
+        height: 100%;
+    }
+    @include phone {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    &__logoImg {
+        width: 35px;
+        height: 36px;
+        background: url("./img/logo.png");
+
+        @include tablet{
+            display: none;
+        }
+        @include phone {
+            margin-right: 5px;
+            display: block;
+        }
+    }
+    &__logoText {
+        @include title(20px);
+        line-height: 23px;
+        width: 104px;
+        height: 24px;
+        margin-left: 5px;
+
+        @include tablet{
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__text {
+        @include text(16px);
+        line-height: 30px;
+        width: 330px;
+        height: 61px;
+        margin: 20px 0 30px 0;
+        @include tablet {
+            text-align: center;
+        }
+
+    }
+    &__link {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+        border-radius: 50%;
+        
+    }
+    &__copy {
+        width: 132px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #AFB5C0;
+    }
+}
+.footer_left_logo_wrap {
+    width: 100%;
+    height: fit-content;
+    @include display(row,flex-start);
+
+    @include tablet {
+        @include display(row, center);
+    }
+}
+.footer_left_text_wrap {
+    width: 100%;
+    height: fit-content;
+    @include tablet {
+        @include display(row, center);
+    }
+}
+.footer_left_control_wrap {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    
+    @include display(row,flex-start);
+    @include tablet {
+        @include display(row, center);
+    }
+    
+}
+.footer_left_copy_wrap {
+    width: 100%;
+    height: fit-content;
+    @include tablet {
+        @include display(row, center);
+    }
+}
+.facebook {
+    background: url("./img/Facebook.png");
+    
+}
+.twitter  {
+    background: url("./img/Twitter.png");
+    
+}
+.instagram {
+    background: url("./img/Instagram.png");
+    
+}
